@@ -84,4 +84,6 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(port);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
