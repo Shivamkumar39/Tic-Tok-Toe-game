@@ -4,7 +4,7 @@ const { Server } = require("socket.io");
 
 const port = 5055
 const httpServer = createServer();
-const io = new Server(httpServer, {
+const io = new Server(Server, {
   cors: "http://localhost:5174/",
 });
 
@@ -84,6 +84,6 @@ io.on("connection", (socket) => {
   });
 });
 
-app.listen(port, () => {
+Server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
