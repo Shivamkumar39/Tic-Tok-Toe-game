@@ -2,9 +2,9 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 
 
-const port = 5055
+const port = 3000
 const httpServer = createServer();
-const io = new Server(Server, {
+const io = new Server(httpServer, {
   cors: "http://localhost:5174/",
 });
 
@@ -84,6 +84,6 @@ io.on("connection", (socket) => {
   });
 });
 
-Server.listen(port, () => {
+httpServer.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
