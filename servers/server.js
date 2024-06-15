@@ -2,7 +2,7 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 
 
-const port = 3000
+const port = 5050
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: "http://localhost:5174/",
