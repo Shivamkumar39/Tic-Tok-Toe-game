@@ -129,7 +129,7 @@ const App = () => {
     const username = result.value;
     setPlayerName(username);
 
-    const newSocket = io("http://localhost:5050", {
+    const newSocket = io("https://tic-tok-toe-game.onrender.com", { //https://tic-tok-toe-game.onrender.com   http://localhost:5050
       autoConnect: true,
     });
 
